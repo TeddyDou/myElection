@@ -77,10 +77,10 @@ public class LeaderElection {
 	public int ElectLeader(){
 		int newLeaderPort = -1;
 		try {
-			if(!this.isElectingFlag()){
-				synchronized (LeaderElection.lock){  
-					LeaderElection.lock.wait();
-			}
+//			if(this.isElectingFlag()){
+//				synchronized (LeaderElection.lock){  
+//					LeaderElection.lock.wait();
+//			}
 			this.setElectingFlag(true);
 			System.out.println(ReplicaManager2.REPLICA_MANAGER_NAME + "is holding an election.");
 			if (this.isLeaderFlag){
@@ -92,6 +92,7 @@ public class LeaderElection {
 						notifyNewLeader(gm[i].getPort());
 					}
 				}
+				return newLeaderPort;
 			}
 			else{
 				if(!sendMessage())
@@ -104,22 +105,23 @@ public class LeaderElection {
     						notifyNewLeader(gm[i].getPort());
     					}
     				}
-                }
+                    return newLeaderPort;
+				}
 				else
-					newLeaderPort = receiveLeader();				
+					newLeaderPort = receiveLeader();
+					return newLeaderPort;
 			}
-		}
 		} catch (Exception e) {
 			System.out.println(e);
-		}finally{
-			this.setElectingFlag(false);
-			synchronized (LeaderElection.lock) {
-				LeaderElection.lock.notifyAll();
-            }
 		}
-		return newLeaderPort;
 		
-	}
+//		this.setElectingFlag(false);
+//		synchronized (LeaderElection.lock) {
+//		LeaderElection.lock.notifyAll();
+		
+		return newLeaderPort;
+}
+		
 
 	private void notifyNewLeader(int port) {
 		String msg = Integer.toString(ReplicaManager2.LOCAL_PORT);
