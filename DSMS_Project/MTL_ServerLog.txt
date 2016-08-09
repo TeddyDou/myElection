@@ -1,0 +1,121 @@
+Server MTLis running 2016/08/06 11:49:37
+Server MTLis running 2016/08/06 11:51:41
+Server MTLis running 2016/08/06 11:53:44
+Server MTLis running 2016/08/07 15:24:04
+Server MTLis running 2016/08/07 15:25:09
+Server MTLis running 2016/08/07 15:27:42
+Server MTLis running 2016/08/07 15:59:57
+Server MTLis running 2016/08/07 16:05:28
+Server MTLis running 2016/08/07 16:06:38
+Server MTLis running 2016/08/07 16:16:17
+Server MTLis running 2016/08/07 16:20:23
+Server MTLis running 2016/08/07 16:43:41
+Server MTLis running 2016/08/07 16:43:52
+Server MTLis running 2016/08/07 16:44:24
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:45:42
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:45:45
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:45:48
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:45:51
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:45:54
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:45:57
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:00
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:03
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:06
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:09
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:12
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:15
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:18
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:21
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:24
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:27
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:30
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:33
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:36
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:39
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:42
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:45
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:48
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:51
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:54
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:46:57
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:00
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:03
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:06
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:09
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:12
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:15
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:18
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:21
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:24
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:27
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:30
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:33
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:36
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:39
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 16:47:42
+Server MTLis running 2016/08/07 17:05:49
+Server MTLis running 2016/08/07 17:05:59
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 17:06:28
+Server MTLis running 2016/08/07 17:08:20
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 17:08:35
+Get the record count --
+MTL : 0, LVL : 0, DDO : 0,  2016/08/07 17:08:35
+ Create Doctor Record: DR10000
+First Name: MENG
+Last Name: YAO
+Address: SDF
+Phone: DFG
+specialization: DF
+location: GDF
+ 2016/08/07 17:09:49
+ Create Doctor Record: DR10001
+First Name: MENG
+Last Name: YAO
+Address: SDF
+Phone: DFG
+specialization: DF
+location: GDF
+ 2016/08/07 17:09:49
