@@ -38,7 +38,7 @@ enum RMSequencer {
 public class Front_End_Impl extends Front_EndPOA{
 	
 	private String ServerName;
-	private int FEport;
+	private static int FEport;
 	private ORB orb = null;
 	
 	// Leader Host IP and Port
@@ -71,7 +71,6 @@ public class Front_End_Impl extends Front_EndPOA{
 			rootPOA.the_POAManager().activate();
 			System.out.println("ORB runs!");
 			orb.run();
-
 			}
 
 	@Override
@@ -211,7 +210,7 @@ public class Front_End_Impl extends Front_EndPOA{
 	public static void main(String[] args) throws Exception {
 		Front_End_Impl server = new Front_End_Impl();
 
-		server.ORBsetup(args); // ORB setup function	
+		//server.ORBsetup(args); // ORB setup function	
 		server.Front_End_Listener(); //setup UDP listener for communicating with leader host
 
 	}
@@ -229,17 +228,34 @@ public class Front_End_Impl extends Front_EndPOA{
 						DatagramPacket request = new DatagramPacket(buffer, buffer.length);
 						socket.receive(request);
 						String content = new String(request.getData()).trim();
-						if(content.equals("leader?")){
+						if(content.equals("Is there a leader?")){
+							if(LeaderInfo.isQuestingLeaderFlag()){
+								synchronized (LeaderInfo.lock) {LeaderInfo.lock.wait();
+								}
+			                }
+							String resend_leader_info = Boolean.toString(LeaderInfo.isLeaderExist());
+							DatagramPacket reply_lead_info = new DatagramPacket(resend_leader_info.getBytes(),resend_leader_info.getBytes().length, request.getAddress(), request.getPort());
+							socket.send(reply_lead_info);
+							synchronized (LeaderInfo.lock) {
+								LeaderInfo.lock.notifyAll();
+			                }
+						}
+						else if(content.equals("leader?")){
 							String resend_leader_port = Integer.toString(LEADER_HOST_PORT);
 							DatagramPacket reply_leader = new DatagramPacket(resend_leader_port.getBytes(),resend_leader_port.getBytes().length, request.getAddress(), request.getPort());
 							socket.send(reply_leader);
 						}else{
-							int leader_port = Integer.parseInt(new String(request.getData()).trim());
-							LEADER_HOST_PORT = leader_port;
-							String acknowledgement = "OK";
-							DatagramPacket update_leader = new DatagramPacket(acknowledgement.getBytes(),acknowledgement.getBytes().length, request.getAddress(), request.getPort());
-							System.out.println("leader host's port is " + leader_port);
-							socket.send(update_leader);
+							synchronized(this){
+								//if (!LeaderInfo.isLeaderExist()){
+									int leader_port = Integer.parseInt(new String(request.getData()).trim());
+									LEADER_HOST_PORT = leader_port;
+									String acknowledgement = "succeed";
+									DatagramPacket update_leader = new DatagramPacket(acknowledgement.getBytes(),acknowledgement.getBytes().length, request.getAddress(), request.getPort());
+									System.out.println("leader host's port is " + leader_port);
+									socket.send(update_leader);
+									LeaderInfo.setLeaderExistFlag(true);
+								//}
+							}							
 						}
 					}	
 				}
@@ -254,6 +270,7 @@ public class Front_End_Impl extends Front_EndPOA{
 		System.out.println("start listening... ...");
 		getLeader.start();
 	}
+
 
 
 }

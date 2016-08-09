@@ -1,4 +1,4 @@
-package ReplicaManager;
+package ReplicaManager3;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,18 +8,18 @@ import HeartBeat.Heart;
 import HeartBeat.HeartBeatCallBack;
 import HeartBeat.Heart_Beat_Listener;
 
-public class ReplicaManager {
+public class ReplicaManager3 {
 	
 	public static Map<String, String> REQUEST_HASH_TABLE = new HashMap<String, String>();
 	
 	public static int FRONT_END_PORT = 4000;
-	public static String REPLICA_MANAGER_NAME = "rep1";
+	public static String REPLICA_MANAGER_NAME = "rep3";
 	public static String REPLICA_MANAGER_IP = "localhost";
 	public static int REPLICA_MANAGER_ID = 3;
-	public static int LOCAL_PORT = 5000;
-	public static int BROAD_CAST_PORT = 5004;
-	public static int HEARTBEAT_PORT = 5005;
-	public static int LEADER_ELECTION_PORT = 5006;
+	public static int LOCAL_PORT = 5002;
+	public static int BROAD_CAST_PORT = 5102;
+	public static int HEARTBEAT_PORT = 5007;
+	public static int LEADER_ELECTION_PORT = 5103;
 
 	public static void main(String[] args) throws Exception {
 		LeaderElection el = new LeaderElection();
@@ -32,7 +32,7 @@ public class ReplicaManager {
 		
 		Heart h1 = new Heart("localhost", 5005);
 		h1.beat();
-		Heart h2 = new Heart("localhost", 5005);
+		Heart h2 = new Heart("localhost", 5006);
 		h2.beat();
 		new Heart_Beat_Listener(HEARTBEAT_PORT, new HeartBeatCallBack() {
 			
@@ -50,12 +50,6 @@ public class ReplicaManager {
 				}
 			}
 		});
-//		for(int i = 0; i < 15000; i++){
-//			int x = i*20;
-//		}
-//		h1.stopRunning();
-//		h2.stopRunning();
-//		System.out.println("finish");
 	}
 
 }
