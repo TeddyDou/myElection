@@ -4,15 +4,17 @@ public class ReplicaManagerInfo {
 
 	private String name;
 	private String IP;
-	private int port;
+	private int local_port;
 	private int ID;
+	private int election_port;
 	
-	public ReplicaManagerInfo(String name, String iP, int port, int iD) {
+	public ReplicaManagerInfo(String name, String iP, int localPort, int iD, int electionPort) {
 		super();
 		this.name = name;
 		IP = iP;
-		this.port = port;
+		this.local_port = localPort;
 		ID = iD;
+		this.election_port = electionPort;
 	}
 
 	public String getName() {
@@ -31,12 +33,20 @@ public class ReplicaManagerInfo {
 		IP = iP;
 	}
 
-	public int getPort() {
-		return port;
+	public int getLocal_port() {
+		return local_port;
 	}
 
-	public void setPort(int port) {
-		this.port = port;
+	public void setLocal_port(int local_port) {
+		this.local_port = local_port;
+	}
+
+	public int getElection_port() {
+		return election_port;
+	}
+
+	public void setElection_port(int election_port) {
+		this.election_port = election_port;
 	}
 
 	public int getID() {
